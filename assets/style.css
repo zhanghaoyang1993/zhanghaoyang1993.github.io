@@ -19,3 +19,117 @@
 @media(prefers-reduced-motion:no-preference){.market-flow{animation:market-flow 16s linear infinite}.market-node-halo{animation:market-pulse 7s ease-in-out infinite}.market-node-delayed{animation-delay:3.5s}}
 @media(max-width:640px){.hero .eyebrow{font-size:10px;max-width:290px;line-height:1.9}.hero-role .role-organization{font-size:14px}.market-visual{margin:6px 0 0;padding:22px 18px 18px}.market-visual figcaption{font-size:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.market-visual *{animation:none!important}}
+
+/* Compact technical content, using the existing typography and colour palette. */
+.expertise-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 64px;margin:28px 0}
+.expertise-grid h3{font-size:22px;letter-spacing:-.02em;margin-bottom:14px}
+.expertise-grid p,.expertise-grid li{font-size:15px;line-height:1.7}
+.expertise-grid p{margin-bottom:0}
+.expertise-grid ul{margin:0;padding-left:18px}
+.expertise-grid li{margin-bottom:6px}
+.expertise-section{border-top:1px solid var(--line);padding-top:48px}
+.experience-project{margin-top:22px;border-left:2px solid var(--line);padding-left:18px}
+.experience-project h4{font-size:15px;line-height:1.6;color:var(--navy);margin:0 0 10px}
+.experience-project h4 a{color:var(--blue)}
+.awards{grid-template-columns:repeat(2,minmax(0,1fr))}
+.credentials-section{padding-top:24px}
+.credential{display:grid;grid-template-columns:240px minmax(0,1fr);gap:40px;border-top:1px solid var(--line);padding:25px 0}
+.credential h3{font-size:22px;line-height:1.4;margin-bottom:8px}
+.credential-issuer{font-size:14px;margin-bottom:10px}
+.credential .small{margin-bottom:8px}
+.selected-papers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 64px}
+.selected-papers article{border-top:1px solid var(--line);padding-top:20px}
+.selected-papers .eyebrow{font-size:10px;letter-spacing:.08em;margin-bottom:10px}
+.selected-papers h3{font-size:22px;line-height:1.4;margin-bottom:10px}
+.selected-papers p:not(.eyebrow){font-size:13px;line-height:1.65;margin-bottom:8px}
+.selected-papers h3 a{color:var(--blue)}
+.detail-hero .deck{color:var(--navy);margin-bottom:24px}
+.project-full-name{font-size:16px;max-width:850px;margin-bottom:20px}
+.project-status{display:inline-block;background:var(--light);color:var(--blue);font-size:11px;padding:5px 12px;margin-bottom:0}
+.prose li{margin-bottom:15px}
+.cv-preview{margin:0;max-width:440px;width:100%}
+.cv-preview img{display:block;width:100%;height:auto;border:1px solid var(--line);box-shadow:0 12px 45px #142d4e12}
+.cv-preview figcaption{font-size:11px;color:var(--muted);margin-top:14px;text-align:center}
+.cv-support{font-size:23px;line-height:1.6;color:var(--navy)}
+.cv-copy>.tags{margin:24px 0 30px}
+@media(max-width:640px){
+  .hero-copy{min-width:0}
+  .hero h1{font-size:clamp(62px,22vw,82px)}
+  .project-row h3{font-size:clamp(21px,6.4vw,25px)}
+  .expertise-grid,.selected-papers{grid-template-columns:1fr;gap:25px}
+  .expertise-grid h3,.selected-papers h3{font-size:21px}
+  .credential{grid-template-columns:1fr;gap:6px}
+  .credential h3{font-size:21px}
+  .credential .date{margin-bottom:6px}
+  .awards{grid-template-columns:1fr}
+  .project-full-name{font-size:15px}
+  .detail-hero .deck{font-size:18px}
+  .cv-support{font-size:21px}
+  .section-top{flex-wrap:wrap}
+  .project-row>div,.timeline-row>div{min-width:0}
+}
+
+/* Home: personal identity first, market context as a calm editorial transition. */
+.home-page .hero{grid-template-columns:minmax(0,1fr) 432px;gap:80px;padding:44px 0 46px;align-items:center}
+.home-page .hero-copy{min-width:0}
+.home-page .hero-copy>.eyebrow{font-size:10px;letter-spacing:.14em;line-height:1.8;margin:0}
+.home-page .hero h1{font-size:112px;line-height:.95;letter-spacing:-.065em;margin:22px 0 24px}
+.home-page .hero-role{display:flex;flex-direction:column;align-items:flex-start;gap:3px;font-size:20px;line-height:1.5;margin:0 0 28px}
+.home-page .hero-role .role-organization{font-size:15px}
+.home-page .hero .actions{gap:26px}
+.home-page .hero-portrait{margin:0;min-width:0}
+.home-page .hero-portrait img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;object-position:48% 50%;border-radius:4px}
+.home-page .intro-band{padding:0;border-top:1px solid #dfe9f3}
+.home-focus-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:96px;align-items:center;padding:34px 0 36px}
+.home-page .focus-copy>.eyebrow{margin-bottom:18px}
+.home-page .intro-text{max-width:650px;font-size:19px;line-height:1.75;letter-spacing:-.01em}
+.home-page .intro-text p{margin-bottom:18px}
+.home-page .intro-text p:last-child{margin-bottom:0}
+.home-page .market-visual{margin:0;padding:0;border:0;background:none;min-width:0}
+.home-page .market-visual-title{font-size:10px;letter-spacing:.12em;margin:0}
+.home-page .market-visual svg{margin:0}
+.home-page .market-visual figcaption{font-size:11px;padding-top:10px;gap:2px}
+.home-page .market-visual figcaption span:last-child{font-size:10px}
+.home-page>.section{padding-top:60px;padding-bottom:56px}
+.home-page .section-top{margin-bottom:28px}
+.home-page h2{font-size:34px;letter-spacing:-.035em}
+.home-page .project-row{grid-template-columns:48px minmax(0,1fr);padding:28px 0}
+.home-page .project-row h3{font-size:29px}
+.home-page .education-band>.section{padding-top:54px;padding-bottom:50px}
+.home-page .expertise-grid{gap:28px 64px;margin:24px 0 30px}
+.home-page .expertise-grid article{border-top:1px solid #cbdcea;padding-top:18px}
+.home-page .expertise-grid h3{font-size:21px}
+.home-page .selected-papers h3{font-size:21px}
+@media(max-width:1000px) and (min-width:641px){
+  .home-page .hero{grid-template-columns:minmax(0,1fr) 270px;gap:42px;padding:42px 0}
+  .home-page .hero h1{font-size:clamp(72px,10vw,102px)}
+  .home-page .hero-role{font-size:18px}
+  .home-focus-layout{grid-template-columns:minmax(0,1fr) 270px;gap:42px}
+  .home-page .intro-text{font-size:17px;line-height:1.7}
+}
+@media(max-width:640px){
+  .home-page .hero{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:28px 0 32px}
+  .home-page .hero-copy{display:contents}
+  .home-page .hero-copy>.eyebrow{order:0;font-size:10px;letter-spacing:.09em;line-height:1.8;max-width:none}
+  .home-page .hero h1{order:1;font-size:clamp(34px,10.8vw,44px);line-height:1.1;letter-spacing:-.055em;margin:14px 0 22px;white-space:nowrap}
+  .home-page .hero h1 br{display:none}
+  .home-page .hero h1 span{margin-left:.2em}
+  .home-page .hero-portrait{order:2;margin-bottom:22px}
+  .home-page .hero-portrait img{aspect-ratio:4/3;object-position:48% 44%;border-radius:3px}
+  .home-page .hero-role{order:3;font-size:18px;gap:2px;margin-bottom:22px}
+  .home-page .hero-role .role-organization{font-size:14px}
+  .home-page .hero .actions{order:4;gap:16px 22px}
+  .home-focus-layout{grid-template-columns:1fr;gap:28px;padding:30px 0}
+  .home-page .focus-copy>.eyebrow{margin-bottom:14px}
+  .home-page .intro-text{font-size:17px;line-height:1.7}
+  .home-page .market-visual{width:min(100%,340px);margin:auto}
+  .home-page .market-visual-title{font-size:10px}
+  .home-page .market-visual figcaption{font-size:10px}
+  .home-page>.section{padding-top:38px;padding-bottom:38px}
+  .home-page h2{font-size:28px}
+  .home-page .section-top{gap:14px;margin-bottom:24px}
+  .home-page .project-row{grid-template-columns:28px minmax(0,1fr);padding:24px 0}
+  .home-page .project-row h3{font-size:24px}
+  .home-page .education-band>.section{padding-top:38px;padding-bottom:36px}
+  .home-page .expertise-grid{gap:24px;margin-bottom:26px}
+}
