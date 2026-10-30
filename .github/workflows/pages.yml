@@ -1,0 +1,37 @@
+name: Deploy GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify generated public files
+        shell: python
+        run: |
+          import hashlib, json, pathlib
+          root = pathlib.Path('.')
+          expected = json.loads((root / '.portfolio-manifest.json').read_text())
+          actual = {p.as_posix() for p in root.rglob('*') if p.is_file() and '.git' not in p.parts}
+          assert actual == set(expected) | {'.portfolio-manifest.json'}, 'Unexpected public file'
+          for name, sha in expected.items():
+              assert hashlib.sha256((root / name).read_bytes()).hexdigest() == sha, name
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: Deploy
+        id: deploy
+        uses: actions/deploy-pages@v4

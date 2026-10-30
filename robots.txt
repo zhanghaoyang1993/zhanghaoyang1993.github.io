@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zhanghaoyang1993.github.io/sitemap.xml
